@@ -1,4 +1,4 @@
-<username>/nodejsbuilddeploy:
+<username>/Example-Node:
   # Distelli Manifest example
   # this example assumes the build and deploy servers are:
   # Ubuntu 14.04 
@@ -13,7 +13,7 @@
     - echo "-Installing npm-"
     - sudo apt-get -y install npm
     - echo "--Building--"
-    - sudo npm install
+    - npm install
     - echo "--Testing--"
     - npm test
 
@@ -36,9 +36,9 @@
   PostInstall:
     - echo "Begin PostInstall"
     - npm install
-    
+
   Env:
     - PORT: 3000
-    
+
   Exec:
     - /usr/bin/nodejs app.js
